@@ -54,3 +54,15 @@ if (eleccionProc == 1) {
         procIntel9.elegir();
     }
 }
+
+const procesadores = [];
+procesadores.push(procAmd5);
+procesadores.push(procAmd7);
+procesadores.push(procAmd9);
+procesadores.push(procIntel5);
+procesadores.push(procIntel7);
+procesadores.push(procIntel9);
+
+const filtroPrecio = procesadores.filter(prod => prod.precio < 50000);
+console.log("Los procesadores con precio inferior a $50000 son: ");
+console.log(filtroPrecio);
