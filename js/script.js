@@ -35,34 +35,35 @@ const procIntel5 = new Procesador("Intel", "Core i5 10600K", 32250);
 const procIntel7 = new Procesador("Intel", "Core i7 10700KF", 48390);
 const procIntel9 = new Procesador("Intel", "Core i9 10900KF", 70090);
 
+const componentesElegidos = [];
+
 if (eleccionProc == 1) {
     selecModelo = parseInt(prompt("Seleccione el modelo del procesador:\n1. AMD Ryzen 5 5600X\n2. AMD Ryzen 7 5800X\n3. AMD Ryzen 9 5900X"));
     if (selecModelo == 1) {
         procAmd5.elegir();
+        componentesElegidos.push(procAmd5);
     } else if (selecModelo == 2) {
         procAmd7.elegir();
+        componentesElegidos.push(procAmd7);
     } else if (selecModelo == 3) {
         procAmd9.elegir();
+        componentesElegidos.push(procAmd9);
     }
 } else if (eleccionProc == 2) {
     selecModelo = parseInt(prompt("Seleccione el modelo del procesador:\n1. Intel Core i5 10600K\n2. Intel Core i7 10700KF\n3. Intel Core i9 10900KF"));
     if (selecModelo == 1) {
         procIntel5.elegir();
+        componentesElegidos.push(procIntel5);
     } else if (selecModelo == 2) {
         procIntel7.elegir();
+        componentesElegidos.push(procIntel7);
     } else if (selecModelo == 3) {
         procIntel9.elegir();
+        componentesElegidos.push(procIntel9);
     }
 }
 
-const procesadores = [];
-procesadores.push(procAmd5);
-procesadores.push(procAmd7);
-procesadores.push(procAmd9);
-procesadores.push(procIntel5);
-procesadores.push(procIntel7);
-procesadores.push(procIntel9);
-
-const filtroPrecio = procesadores.filter(prod => prod.precio < 50000);
-console.log("Los procesadores con precio inferior a $50000 son: ");
-console.log(filtroPrecio);
+console.log("Listado de componentes elegidos: ");
+for (const componentes of componentesElegidos) {
+    console.log(componentes);
+}
