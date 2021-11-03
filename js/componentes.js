@@ -1,20 +1,57 @@
-class Motherboard {
-    constructor(tipo, compatibilidad, marca, modelo, precio, imgLink) {
-        this.tipo = tipo;
-        this.compatibilidad = compatibilidad;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.precio = parseFloat(precio);
-        this.imgLink = imgLink;
+//Motherboards
+const motherboardsAmd = [{
+        id: 1,
+        tipo: "Motherboard",
+        marca: "MSI",
+        modelo: "B450M Pro-M2 MAX AM4",
+        precio: 9199,
+        imagen: "../img/motherboards/msiB450M.png"
+    },
+    {
+        id: 2,
+        tipo: "Motherboard",
+        marca: "Asrock",
+        modelo: "B550 Phanton Gaming 4 AM4",
+        precio: 15499,
+        imagen: "../img/motherboards/asrockB550.png"
+    },
+    {
+        id: 3,
+        tipo: "Motherboard",
+        marca: "MSI",
+        modelo: "X570-A Pro Box Atx AM4",
+        precio: 22599,
+        imagen: "../img/motherboards/msiX570.png"
     }
-}
-const motherAmd1 = new Motherboard("Motherboard", "AMD", "GIGABYTE", "A520M DS3H AM4", 10340);
-const motherAmd2 = new Motherboard("Motherboard", "AMD", "GIGABYTE", "B550M H AM4", 13380);
-const motherAmd3 = new Motherboard("Motherboard", "AMD", "GIGABYTE", "X570 UD AM4", 21440);
-const motherIntel1 = new Motherboard("Motherboard", "Intel", "ASUS PRIME", "B460M-A S1200 - 10th Gen", 10900);
-const motherIntel2 = new Motherboard("Motherboard", "Intel", "ASUS PRIME", "B560M-A S1200 - 10th Gen", 13610);
-const motherIntel3 = new Motherboard("Motherboard", "Intel", "ASUS PRIME", "Z590-P S1200 - 10th Gen", 22999);
+];
 
+const motherboardsIntel = [{
+        id: 4,
+        tipo: "Motherboard",
+        marca: "Asus",
+        modelo: "B460m-A S1200 R2.0",
+        precio: 13289,
+        imagen: "../img/motherboards/asusB460m.png"
+    },
+    {
+        id: 5,
+        tipo: "Motherboard",
+        marca: "Asrock",
+        modelo: "B560 Pro4 S1200",
+        precio: 16999,
+        imagen: "../img/motherboards/asrockB560.png"
+    },
+    {
+        id: 6,
+        tipo: "Motherboard",
+        marca: "Gigabyte",
+        modelo: "Z590 UD S1200",
+        precio: 28449,
+        imagen: "../img/motherboards/gigabyteZ590.png"
+    }
+];
+
+//Procesadores
 const procesadoresAMD = [{
         id: 1,
         tipo: "Procesador",
@@ -67,4 +104,5 @@ const procesadoresIntel = [{
     }
 ];
 
-const carritoDeComponentes = [];
+//Carrito
+let carritoDeComponentes = [];
