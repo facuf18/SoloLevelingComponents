@@ -1,0 +1,65 @@
+[{
+        "id": 0,
+        "tipo": "Placa de Video",
+        "marca": "",
+        "modelo": "Sin placa de video",
+        "precio": 0,
+        "imagen": "../img/graficas/none.png"
+    },
+    {
+        "id": 1,
+        "tipo": "Placa de Video",
+        "marca": "MSI",
+        "modelo": "GEFORCE GTX 1660 SUPER GAMING X",
+        "precio": 129999,
+        "imagen": "../img/graficas/msi1660super.png"
+    },
+    {
+        "id": 2,
+        "tipo": "Placa de Video",
+        "marca": "PALIT",
+        "modelo": "GEFORCE RTX 3060 TI DUAL 8GB",
+        "precio": 199999,
+        "imagen": "../img/graficas/palit3060ti.png"
+    },
+    {
+        "id": 3,
+        "tipo": "Placa de Video",
+        "marca": "PALIT",
+        "modelo": "GEFORCE RTX 3070 GAMING PRO 8GB",
+        "precio": 299999,
+        "imagen": "../img/graficas/palitt3070.png"
+    },
+    {
+        "id": 4,
+        "tipo": "Placa de Video",
+        "marca": "MSI",
+        "modelo": "RADEON RX 6900 XT GAMING Z TRIO 16GB",
+        "precio": 328999,
+        "imagen": "../img/graficas/msirx6900.png"
+    },
+    {
+        "id": 5,
+        "tipo": "Placa de Video",
+        "marca": "MSI",
+        "modelo": "GEFORCE RTX 3080 VENTUS 3X 10GB",
+        "precio": 369999,
+        "imagen": "../img/graficas/msi3080ventus.png"
+    },
+    {
+        "id": 6,
+        "tipo": "Placa de Video",
+        "marca": "ASUS",
+        "modelo": "GEFORCE RTX 3080 ROG STRIX 10GB",
+        "precio": 509000,
+        "imagen": "../img/graficas/asus3080.png"
+    },
+    {
+        "id": 7,
+        "tipo": "Placa de Video",
+        "marca": "MSI",
+        "modelo": "GEFORCE RTX 3090 GAMING X TRIO 24GB",
+        "precio": 636999,
+        "imagen": "../img/graficas/msi3090.png"
+    }
+]

@@ -1,0 +1,41 @@
+[{
+        "id": 1,
+        "tipo": "Memoria Ram",
+        "marca": "Kingston Fury Beast",
+        "modelo": "DDR4 4GB 2666Mhz",
+        "precio": 3359,
+        "imagen": "../img/memoriasRam/kingston4gb.png"
+    },
+    {
+        "id": 2,
+        "tipo": "Memoria Ram",
+        "marca": "Adata XPG Hunter",
+        "modelo": "DDR4 8GB 3200Mhz",
+        "precio": 5399,
+        "imagen": "../img/memoriasRam/xpg8gb.png"
+    },
+    {
+        "id": 3,
+        "tipo": "Memoria Ram",
+        "marca": "Kingston Fury Beast RGB",
+        "modelo": "DDR4 8GB 2666Mhz",
+        "precio": 5799,
+        "imagen": "../img/memoriasRam/kingston8gb.png"
+    },
+    {
+        "id": 4,
+        "tipo": "Memoria Ram",
+        "marca": "Crucial Ballistix Black RGB Bulk",
+        "modelo": "DDR4 16GB 3200Mhz",
+        "precio": 11990,
+        "imagen": "../img/memoriasRam/crucial16gb.png"
+    },
+    {
+        "id": 5,
+        "tipo": "Memoria Ram",
+        "marca": "Patriot Viper Steel RGB",
+        "modelo": "DDR4 32GB 3600Mhz",
+        "precio": 24490,
+        "imagen": "../img/memoriasRam/patriot32gb.png"
+    }
+]

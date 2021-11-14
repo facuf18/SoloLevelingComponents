@@ -1,0 +1,25 @@
+[{
+        "id": 4,
+        "tipo": "Motherboard",
+        "marca": "Asus",
+        "modelo": "B460m-A S1200 R2.0",
+        "precio": 13289,
+        "imagen": "../img/motherboards/asusB460m.png"
+    },
+    {
+        "id": 5,
+        "tipo": "Motherboard",
+        "marca": "Asrock",
+        "modelo": "B560 Pro4 S1200",
+        "precio": 16999,
+        "imagen": "../img/motherboards/asrockB560.png"
+    },
+    {
+        "id": 6,
+        "tipo": "Motherboard",
+        "marca": "Gigabyte",
+        "modelo": "Z590 UD S1200",
+        "precio": 28449,
+        "imagen": "../img/motherboards/gigabyteZ590.png"
+    }
+]
