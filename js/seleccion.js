@@ -1,3 +1,5 @@
+let carritoDeComponentes = [];
+
 $(document).ready(function() {
     $("#btnSeleccionarAmd").click(function() {
         seleccionarAmd();
@@ -18,11 +20,15 @@ function seleccionarAmd() {
         if (estado === "success") {
             let procesadoresAmd = respuesta;
             for (const procesador of procesadoresAmd) {
-                $("#listaComponentes").append(`<li class="m-2 col-sm-3 list-group-item text-center border">
-                <img src=${procesador.imagen} class="imgComponentes">
-                <p><b> ${procesador.marca} ${procesador.modelo}</b></p>
-                <p> $${procesador.precio}</p>
-                <button type="submit" id="btn${procesador.id}" class="btn btn-outline-danger">Agregar</button></li>`);
+
+                $("#listaComponentes").append(`<div class="card me-3 col-sm-3" id="seleccionProcesador">
+                <img src="${procesador.imagen}" class="card-img-top" alt="imgProces">
+                <div class="card-body text-center">
+                    <p class="card-title"><b>${procesador.marca} ${procesador.modelo}</b></p>
+                    <p class="card-text">$${procesador.precio}</p>
+                    <button type="submit" id="btn${procesador.id}" class="btn btn-outline-danger">Agregar</button>
+                </div>
+                </div>`);
 
                 $(`#btn${procesador.id}`).click(function() {
                     agregarAlCarrito(procesador);
@@ -43,11 +49,15 @@ function seleccionarIntel() {
         if (estado === "success") {
             let procesadoresIntel = respuesta;
             for (const procesador of procesadoresIntel) {
-                $("#listaComponentes").append(`<li class="m-2 col-sm-3 list-group-item text-center border">
-                <img src=${procesador.imagen} class="imgComponentes">
-                <p><b> ${procesador.marca} ${procesador.modelo}</b></p>
-                <p> $${procesador.precio}</p>
-                <button type="submit" id="btn${procesador.id}" class="btn btn-outline-danger">Agregar</button></li>`);
+
+                $("#listaComponentes").append(`<div class="card me-3 col-sm-3" id="seleccionProcesador">
+                <img src="${procesador.imagen}" class="card-img-top" alt="imgProces">
+                <div class="card-body text-center">
+                    <p class="card-title"><b>${procesador.marca} ${procesador.modelo}</b></p>
+                    <p class="card-text">$${procesador.precio}</p>
+                    <button type="submit" id="btn${procesador.id}" class="btn btn-outline-danger">Agregar</button>
+                </div>
+                </div>`);
 
                 $(`#btn${procesador.id}`).click(function() {
                     agregarAlCarrito(procesador);
@@ -59,7 +69,7 @@ function seleccionarIntel() {
 }
 
 function selecMotherAmd() {
-    $("li, h5").remove();
+    $("#seleccionProcesador, h5").remove();
     $(".tituloLista").append("<h5 class='pb-3'>Selecciona la motherboard:</h5>");
 
     const URLJSON = "../data/motherboardsAmd.json"
@@ -68,11 +78,15 @@ function selecMotherAmd() {
         if (estado === "success") {
             let motherboardsAmd = respuesta;
             for (const mother of motherboardsAmd) {
-                $("#listaComponentes").append(`<li class="m-2 col-sm-3 list-group-item text-center border">
-                <img src=${mother.imagen} class="imgComponentes">
-                <p><b> ${mother.marca} ${mother.modelo}</b></p>
-                <p> $${mother.precio}</p>
-                <button type="submit" id="btn${mother.id}" class="btn btn-outline-danger">Agregar</button></li>`);
+
+                $("#listaComponentes").append(`<div class="card me-3 col-sm-3" id="seleccionMotherboard">
+                <img src="${mother.imagen}" class="card-img-top" alt="imgProces">
+                <div class="card-body text-center">
+                    <p class="card-title"><b>${mother.marca} ${mother.modelo}</b></p>
+                    <p class="card-text">$${mother.precio}</p>
+                    <button type="submit" id="btn${mother.id}" class="btn btn-outline-danger">Agregar</button>
+                </div>
+                </div>`);
 
                 $(`#btn${mother.id}`).click(function() {
                     agregarAlCarrito(mother);
@@ -84,7 +98,7 @@ function selecMotherAmd() {
 }
 
 function selecMotherIntel() {
-    $("li, h5").remove();
+    $("#seleccionProcesador, h5").remove();
     $(".tituloLista").append("<h5 class='pb-3'>Selecciona la motherboard:</h5>");
 
     const URLJSON = "../data/motherboardsIntel.json"
@@ -93,11 +107,15 @@ function selecMotherIntel() {
         if (estado === "success") {
             let motherboardsIntel = respuesta;
             for (const mother of motherboardsIntel) {
-                $("#listaComponentes").append(`<li class="m-2 col-sm-3 list-group-item text-center border">
-                <img src=${mother.imagen} class="imgComponentes">
-                <p><b> ${mother.marca} ${mother.modelo}</b></p>
-                <p> $${mother.precio}</p>
-                <button type="submit" id="btn${mother.id}" class="btn btn-outline-danger">Agregar</button></li>`);
+
+                $("#listaComponentes").append(`<div class="card me-3 col-sm-3" id="seleccionMotherboard">
+                <img src="${mother.imagen}" class="card-img-top" alt="imgProces">
+                <div class="card-body text-center">
+                    <p class="card-title"><b>${mother.marca} ${mother.modelo}</b></p>
+                    <p class="card-text">$${mother.precio}</p>
+                    <button type="submit" id="btn${mother.id}" class="btn btn-outline-danger">Agregar</button>
+                </div>
+                </div>`);
 
                 $(`#btn${mother.id}`).click(function() {
                     agregarAlCarrito(mother);
@@ -109,7 +127,7 @@ function selecMotherIntel() {
 }
 
 function selecMemoriaRam() {
-    $("li, h5").remove();
+    $("#seleccionMotherboard, h5").remove();
     $(".tituloLista").append("<h5 class='pb-3'>Selecciona las memorias RAM:</h5>");
 
     const URLJSON = "../data/memoriasRam.json"
@@ -118,14 +136,25 @@ function selecMemoriaRam() {
         if (estado === "success") {
             let memoriasRam = respuesta;
             for (const memoria of memoriasRam) {
-                $("#listaComponentes").append(`<li class="m-2 col-sm-3 list-group-item text-center border">
-                <img src=${memoria.imagen} class="imgComponentes">
-                <p><b> ${memoria.marca} ${memoria.modelo}</b></p>
-                <p> $${memoria.precio}</p>
-                <button type="submit" id="btn${memoria.id}" class="btn btn-outline-danger">Agregar</button></li>`);
+
+                $("#listaComponentes").append(`<div class="card me-3 mt-3 col-sm-3" id="seleccionRam">
+                <img src="${memoria.imagen}" class="card-img-top" alt="imgProces">
+                <div class="card-body text-center">
+                    <p class="card-title"><b>${memoria.marca} ${memoria.modelo}</b></p>
+                    <p class="card-text">$${memoria.precio}</p>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <input type="number" min="1" name="cantidad" value="1" class="inputCantidad me-2" id="inputCantidad${memoria.id}">
+                        <button type="submit" id="btn${memoria.id}" class="btn btn-outline-danger">Agregar</button>
+                    </div>
+                </div>
+                </div>`);
 
                 $(`#btn${memoria.id}`).click(function() {
-                    agregarAlCarrito(memoria);
+                    let cantidadDeRams = $(`#inputCantidad${memoria.id}`).val();
+                    console.log(cantidadDeRams);
+                    for (let i = 0; i < cantidadDeRams; i++) {
+                        agregarAlCarrito(memoria);
+                    }
                 });
             }
         }

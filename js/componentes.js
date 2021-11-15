@@ -216,5 +216,3 @@
 // ];
 
 //Carrito
-
-let carritoDeComponentes = [];
