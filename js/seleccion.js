@@ -1,5 +1,3 @@
-let carritoDeComponentes = [];
-
 $(document).ready(function() {
     $("#btnSeleccionarAmd").click(function() {
         seleccionarAmd();
@@ -12,7 +10,7 @@ $(document).ready(function() {
 function seleccionarAmd() {
     $("input").remove();
     $("#botonCarrito").append("<button class='btn btn-danger'>Ver carrito</button>");
-    $(".tituloLista").append("<h5 class='pb-3'>Selecciona el microprocesador:</h5>");
+    $(".tituloLista").append("<h4 class='pb-3'>Procesador</h4>");
 
     const URLJSON = "../data/procesadoresAmd.json"
 
@@ -33,6 +31,7 @@ function seleccionarAmd() {
                 $(`#btn${procesador.id}`).click(function() {
                     agregarAlCarrito(procesador);
                     selecMotherAmd();
+                    mostrarCarrito();
                 });
             }
         }
@@ -41,7 +40,7 @@ function seleccionarAmd() {
 
 function seleccionarIntel() {
     $("input").remove();
-    $(".tituloLista").append("<h5 class='pb-3'>Selecciona el microprocesador:</h5>");
+    $(".tituloLista").append("<h4 class='pb-3'>Procesador</h4>");
 
     const URLJSON = "../data/procesadoresIntel.json"
 
@@ -62,6 +61,7 @@ function seleccionarIntel() {
                 $(`#btn${procesador.id}`).click(function() {
                     agregarAlCarrito(procesador);
                     selecMotherIntel();
+                    mostrarCarrito();
                 });
             }
         }
@@ -69,8 +69,8 @@ function seleccionarIntel() {
 }
 
 function selecMotherAmd() {
-    $("#seleccionProcesador, h5").remove();
-    $(".tituloLista").append("<h5 class='pb-3'>Selecciona la motherboard:</h5>");
+    $("#seleccionProcesador, h4").remove();
+    $(".tituloLista").append("<h4 class='pb-3'>Motherboard</h4>");
 
     const URLJSON = "../data/motherboardsAmd.json"
 
@@ -91,6 +91,7 @@ function selecMotherAmd() {
                 $(`#btn${mother.id}`).click(function() {
                     agregarAlCarrito(mother);
                     selecMemoriaRam();
+                    mostrarCarrito();
                 });
             }
         }
@@ -98,8 +99,8 @@ function selecMotherAmd() {
 }
 
 function selecMotherIntel() {
-    $("#seleccionProcesador, h5").remove();
-    $(".tituloLista").append("<h5 class='pb-3'>Selecciona la motherboard:</h5>");
+    $("#seleccionProcesador, h4").remove();
+    $(".tituloLista").append("<h4 class='pb-3'>Motherboard</h4>");
 
     const URLJSON = "../data/motherboardsIntel.json"
 
@@ -120,6 +121,7 @@ function selecMotherIntel() {
                 $(`#btn${mother.id}`).click(function() {
                     agregarAlCarrito(mother);
                     selecMemoriaRam();
+                    mostrarCarrito();
                 });
             }
         }
@@ -127,8 +129,8 @@ function selecMotherIntel() {
 }
 
 function selecMemoriaRam() {
-    $("#seleccionMotherboard, h5").remove();
-    $(".tituloLista").append("<h5 class='pb-3'>Selecciona las memorias RAM:</h5>");
+    $("#seleccionMotherboard, h4").remove();
+    $(".tituloLista").append("<h4 class='pb-3'>Memoria RAM</h4>");
 
     const URLJSON = "../data/memoriasRam.json"
 
@@ -151,23 +153,12 @@ function selecMemoriaRam() {
 
                 $(`#btn${memoria.id}`).click(function() {
                     let cantidadDeRams = $(`#inputCantidad${memoria.id}`).val();
-                    console.log(cantidadDeRams);
                     for (let i = 0; i < cantidadDeRams; i++) {
                         agregarAlCarrito(memoria);
+                        mostrarCarrito();
                     }
                 });
             }
         }
     });
-}
-
-function agregarAlCarrito(nuevoComponente) {
-    carritoDeComponentes.push(nuevoComponente);
-    console.log(carritoDeComponentes);
-    Swal.fire(
-        'Nuevo componente agregado',
-        nuevoComponente.tipo + " " + nuevoComponente.marca + " " + nuevoComponente.modelo,
-        'success'
-    );
-    localStorage.setItem("miPC", JSON.stringify(carritoDeComponentes));
 }
