@@ -1,14 +1,27 @@
 $(document).ready(function() {
+    seleccionarMarca();
+});
+
+function seleccionarMarca() {
+    localStorage.clear();
+    $("#seleccionProcesador, #seleccionMotherboard, #seleccionRam, #btnFinalizarSeleccion, h4").remove();
+    $("#comienzoSeleccion").append(`
+    <div class="col-lg-6 text-center">
+        <input type="image" src="../img/amd.png" id="btnSeleccionarAmd">
+    </div>
+    <div class="col-lg-6 text-center">
+        <input type="image" src="../img/intel.png" id="btnSeleccionarIntel">
+    </div>`);
     $("#btnSeleccionarAmd").click(function() {
         seleccionarAmd();
     });
     $("#btnSeleccionarIntel").click(function() {
         seleccionarIntel();
     });
-});
+}
 
 function seleccionarAmd() {
-    $("input").remove();
+    $("#btnSeleccionarAmd, #btnSeleccionarIntel").remove();
     $("#botonCarrito").append("<button class='btn btn-danger'>Ver carrito</button>");
     $(".tituloLista").append("<h4 class='pb-3'>Procesador</h4>");
 
@@ -39,7 +52,7 @@ function seleccionarAmd() {
 }
 
 function seleccionarIntel() {
-    $("input").remove();
+    $("#btnSeleccionarAmd, #btnSeleccionarIntel").remove();
     $(".tituloLista").append("<h4 class='pb-3'>Procesador</h4>");
 
     const URLJSON = "../data/procesadoresIntel.json"
@@ -157,8 +170,24 @@ function selecMemoriaRam() {
                         agregarAlCarrito(memoria);
                         mostrarCarrito();
                     }
+                    finalizarSeleccion();
                 });
             }
         }
     });
 }
+
+function finalizarSeleccion() {
+    $("#seleccionRam, h4, h5").remove();
+    $("#titulo").text("Componentes seleccionados");
+    $("#finalizarSeleccion").append("<button type='submit' class='btn btn-danger ms-2' id='btnFinalizarSeleccion'>Finalizar Selección</button>");
+}
+
+$("#finalizarSeleccion").click(function() {
+    Swal.fire({
+        icon: 'success',
+        title: 'La selección de componentes fue completada correctamente!',
+        showConfirmButton: false,
+        timer: 3000
+    });
+});

@@ -11,7 +11,7 @@ function agregarAlCarrito(nuevoComponente) {
         nuevoComponente.tipo + " " + nuevoComponente.marca + " " + nuevoComponente.modelo,
         'success'
     );
-    localStorage.setItem("miPC", JSON.stringify(carritoDeComponentes));
+    sessionStorage.setItem("miPC", JSON.stringify(carritoDeComponentes));
 }
 
 let precioTotal;
@@ -38,3 +38,16 @@ function mostrarCarrito() {
             <td></td>
             <td><b>$${precioTotal}</b></td></tr>`);
 }
+
+$("#btnReiniciarSeleccion").append("<button class='btn btn-outline-danger' id='reiniciar'>Reiniciar Selección</button>");
+
+function reiniciarSeleccion() {
+    carritoDeComponentes.length = 0;
+    preciosComponentes.length = 0;
+    $("td").remove();
+    seleccionarMarca();
+}
+
+$("#reiniciar").click(function() {
+    reiniciarSeleccion();
+});
