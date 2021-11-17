@@ -6,11 +6,14 @@ function agregarAlCarrito(nuevoComponente) {
     preciosComponentes.push(nuevoComponente.precio);
     console.log(carritoDeComponentes);
     console.log(preciosComponentes);
-    Swal.fire(
-        'Nuevo componente agregado',
-        nuevoComponente.tipo + " " + nuevoComponente.marca + " " + nuevoComponente.modelo,
-        'success'
-    );
+    Swal.fire({
+        position: 'top-end',
+        title: 'Nuevo componente agregado',
+        text: nuevoComponente.tipo + " " + nuevoComponente.marca + " " + nuevoComponente.modelo,
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 2500
+    });
     sessionStorage.setItem("miPC", JSON.stringify(carritoDeComponentes));
 }
 
@@ -21,7 +24,6 @@ function calcularPrecioTotal() {
     for (let i = 0; i < preciosComponentes.length; i++) {
         precioTotal += preciosComponentes[i];
     }
-    console.log(precioTotal);
 }
 
 function mostrarCarrito() {
@@ -44,6 +46,7 @@ $("#btnReiniciarSeleccion").append("<button class='btn btn-outline-danger' id='r
 function reiniciarSeleccion() {
     carritoDeComponentes.length = 0;
     preciosComponentes.length = 0;
+    $("#titulo").text("Selección de componentes");
     $("td").remove();
     seleccionarMarca();
 }

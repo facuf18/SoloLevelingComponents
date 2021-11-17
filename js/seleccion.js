@@ -12,6 +12,7 @@ function seleccionarMarca() {
     <div class="col-lg-6 text-center">
         <input type="image" src="../img/intel.png" id="btnSeleccionarIntel">
     </div>`);
+    $("#comienzoSeleccion").fadeIn();
     $("#btnSeleccionarAmd").click(function() {
         seleccionarAmd();
     });
@@ -166,11 +167,20 @@ function selecMemoriaRam() {
 
                 $(`#btn${memoria.id}`).click(function() {
                     let cantidadDeRams = $(`#inputCantidad${memoria.id}`).val();
-                    for (let i = 0; i < cantidadDeRams; i++) {
-                        agregarAlCarrito(memoria);
-                        mostrarCarrito();
+                    if ((cantidadDeRams > 0) && (cantidadDeRams < 5)) {
+                        for (let i = 0; i < cantidadDeRams; i++) {
+                            agregarAlCarrito(memoria);
+                            mostrarCarrito();
+                        }
+                        finalizarSeleccion();
+                    } else {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'Ingrese un valor entre 1 y 4.',
+                            icon: 'error',
+                            confirmButtonText: 'Cool'
+                        });
                     }
-                    finalizarSeleccion();
                 });
             }
         }
