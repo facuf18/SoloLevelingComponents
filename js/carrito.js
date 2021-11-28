@@ -47,7 +47,7 @@ function reiniciarSeleccion() {
     carritoDeComponentes.length = 0;
     preciosComponentes.length = 0;
     $("#titulo").text("Selección de componentes");
-    $("td").remove();
+    $("td, .botonInicial").remove();
     seleccionarMarca();
 }
 

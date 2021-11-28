@@ -2,14 +2,16 @@ $(document).ready(function() {
     seleccionarMarca();
 });
 
+const URLJSON = "../data/componentes.json"
+
 function seleccionarMarca() {
     localStorage.clear();
     $("#seleccionProcesador, #seleccionMotherboard, #seleccionRam, #btnFinalizarSeleccion, h4").remove();
     $("#comienzoSeleccion").append(`
-    <div class="col-lg-6 text-center">
+    <div class="col-lg-6 text-center botonInicial">
         <input type="image" src="../img/amd.png" id="btnSeleccionarAmd">
     </div>
-    <div class="col-lg-6 text-center">
+    <div class="col-lg-6 text-center botonInicial">
         <input type="image" src="../img/intel.png" id="btnSeleccionarIntel">
     </div>`);
     $("#comienzoSeleccion").fadeIn();
@@ -26,13 +28,11 @@ function seleccionarAmd() {
     $("#botonCarrito").append("<button class='btn btn-danger'>Ver carrito</button>");
     $(".tituloLista").append("<h4 class='pb-3'>Procesador</h4>");
 
-    const URLJSON = "../data/procesadoresAmd.json"
-
     $.getJSON(URLJSON, function(respuesta, estado) {
         if (estado === "success") {
-            let procesadoresAmd = respuesta;
+            let componentes = respuesta;
+            let procesadoresAmd = componentes.filter(comp => comp.tipo == "ProcesadorAmd");
             for (const procesador of procesadoresAmd) {
-
                 $("#listaComponentes").append(`<div class="card me-3 col-sm-3" id="seleccionProcesador">
                 <img src="${procesador.imagen}" class="card-img-top" alt="imgProces">
                 <div class="card-body text-center">
@@ -56,13 +56,11 @@ function seleccionarIntel() {
     $("#btnSeleccionarAmd, #btnSeleccionarIntel").remove();
     $(".tituloLista").append("<h4 class='pb-3'>Procesador</h4>");
 
-    const URLJSON = "../data/procesadoresIntel.json"
-
     $.getJSON(URLJSON, function(respuesta, estado) {
         if (estado === "success") {
-            let procesadoresIntel = respuesta;
+            let componentes = respuesta;
+            let procesadoresIntel = componentes.filter(comp => comp.tipo == "ProcesadorIntel");
             for (const procesador of procesadoresIntel) {
-
                 $("#listaComponentes").append(`<div class="card me-3 col-sm-3" id="seleccionProcesador">
                 <img src="${procesador.imagen}" class="card-img-top" alt="imgProces">
                 <div class="card-body text-center">
@@ -86,13 +84,11 @@ function selecMotherAmd() {
     $("#seleccionProcesador, h4").remove();
     $(".tituloLista").append("<h4 class='pb-3'>Motherboard</h4>");
 
-    const URLJSON = "../data/motherboardsAmd.json"
-
     $.getJSON(URLJSON, function(respuesta, estado) {
         if (estado === "success") {
-            let motherboardsAmd = respuesta;
+            let componentes = respuesta;
+            let motherboardsAmd = componentes.filter(comp => comp.tipo == "MotherboardAmd");
             for (const mother of motherboardsAmd) {
-
                 $("#listaComponentes").append(`<div class="card me-3 col-sm-3" id="seleccionMotherboard">
                 <img src="${mother.imagen}" class="card-img-top" alt="imgProces">
                 <div class="card-body text-center">
@@ -116,13 +112,11 @@ function selecMotherIntel() {
     $("#seleccionProcesador, h4").remove();
     $(".tituloLista").append("<h4 class='pb-3'>Motherboard</h4>");
 
-    const URLJSON = "../data/motherboardsIntel.json"
-
     $.getJSON(URLJSON, function(respuesta, estado) {
         if (estado === "success") {
-            let motherboardsIntel = respuesta;
+            let componentes = respuesta;
+            let motherboardsIntel = componentes.filter(comp => comp.tipo == "MotherboardIntel");
             for (const mother of motherboardsIntel) {
-
                 $("#listaComponentes").append(`<div class="card me-3 col-sm-3" id="seleccionMotherboard">
                 <img src="${mother.imagen}" class="card-img-top" alt="imgProces">
                 <div class="card-body text-center">
@@ -146,11 +140,10 @@ function selecMemoriaRam() {
     $("#seleccionMotherboard, h4").remove();
     $(".tituloLista").append("<h4 class='pb-3'>Memoria RAM</h4>");
 
-    const URLJSON = "../data/memoriasRam.json"
-
     $.getJSON(URLJSON, function(respuesta, estado) {
         if (estado === "success") {
-            let memoriasRam = respuesta;
+            let componentes = respuesta;
+            let memoriasRam = componentes.filter(comp => comp.tipo == "Memoria Ram");
             for (const memoria of memoriasRam) {
 
                 $("#listaComponentes").append(`<div class="card me-3 mt-3 col-sm-3" id="seleccionRam">
