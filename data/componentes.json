@@ -96,7 +96,7 @@
     },
     {
         "id": 13,
-        "tipo": "Memoria Ram",
+        "tipo": "MemoriaRam",
         "marca": "Kingston Fury Beast",
         "modelo": "DDR4 4GB 2666Mhz",
         "precio": 3359,
@@ -104,7 +104,7 @@
     },
     {
         "id": 14,
-        "tipo": "Memoria Ram",
+        "tipo": "MemoriaRam",
         "marca": "Adata XPG Hunter Black",
         "modelo": "DDR4 8GB 3200Mhz",
         "precio": 5399,
@@ -112,7 +112,7 @@
     },
     {
         "id": 15,
-        "tipo": "Memoria Ram",
+        "tipo": "MemoriaRam",
         "marca": "Kingston Fury Beast RGB",
         "modelo": "DDR4 8GB 2666Mhz",
         "precio": 5799,
@@ -120,7 +120,7 @@
     },
     {
         "id": 16,
-        "tipo": "Memoria Ram",
+        "tipo": "MemoriaRam",
         "marca": "Crucial Ballistix Black RGB Bulk",
         "modelo": "DDR4 16GB 3200Mhz",
         "precio": 11990,
@@ -128,7 +128,7 @@
     },
     {
         "id": 17,
-        "tipo": "Memoria Ram",
+        "tipo": "MemoriaRam",
         "marca": "Patriot Viper Steel RGB",
         "modelo": "DDR4 32GB 3600Mhz",
         "precio": 24490,
@@ -136,7 +136,7 @@
     },
     {
         "id": 18,
-        "tipo": "Placa de Video",
+        "tipo": "PlacaDeVideo",
         "marca": "",
         "modelo": "Sin placa de video",
         "precio": 0,
@@ -144,7 +144,7 @@
     },
     {
         "id": 19,
-        "tipo": "Placa de Video",
+        "tipo": "PlacaDeVideo",
         "marca": "MSI",
         "modelo": "GEFORCE GTX 1660 SUPER GAMING X",
         "precio": 129999,
@@ -152,7 +152,7 @@
     },
     {
         "id": 20,
-        "tipo": "Placa de Video",
+        "tipo": "PlacaDeVideo",
         "marca": "PALIT",
         "modelo": "GEFORCE RTX 3060 TI DUAL 8GB",
         "precio": 199999,
@@ -160,7 +160,7 @@
     },
     {
         "id": 21,
-        "tipo": "Placa de Video",
+        "tipo": "PlacaDeVideo",
         "marca": "PALIT",
         "modelo": "GEFORCE RTX 3070 GAMING PRO 8GB",
         "precio": 299999,
@@ -168,7 +168,7 @@
     },
     {
         "id": 22,
-        "tipo": "Placa de Video",
+        "tipo": "PlacaDeVideo",
         "marca": "MSI",
         "modelo": "RADEON RX 6900 XT GAMING Z TRIO 16GB",
         "precio": 328999,
@@ -176,7 +176,7 @@
     },
     {
         "id": 23,
-        "tipo": "Placa de Video",
+        "tipo": "PlacaDeVideo",
         "marca": "MSI",
         "modelo": "GEFORCE RTX 3080 VENTUS 3X 10GB",
         "precio": 369999,
@@ -184,7 +184,7 @@
     },
     {
         "id": 24,
-        "tipo": "Placa de Video",
+        "tipo": "PlacaDeVideo",
         "marca": "ASUS",
         "modelo": "GEFORCE RTX 3080 ROG STRIX 10GB",
         "precio": 509000,
@@ -192,10 +192,122 @@
     },
     {
         "id": 25,
-        "tipo": "Placa de Video",
+        "tipo": "PlacaDeVideo",
         "marca": "MSI",
         "modelo": "GEFORCE RTX 3090 GAMING X TRIO 24GB",
         "precio": 636999,
         "imagen": "../img/graficas/msi3090.png"
+    },
+    {
+        "id": 26,
+        "tipo": "DiscoHDD",
+        "marca": "Western Digital",
+        "modelo": "HDD 1Tb WD Blue",
+        "precio": 4930,
+        "imagen": "../img/hdd/wdblue1tb.png"
+    },
+    {
+        "id": 27,
+        "tipo": "DiscoHDD",
+        "marca": "Seagate",
+        "modelo": "HDD 1Tb Skyhawk",
+        "precio": 5899,
+        "imagen": "../img/hdd/seagate1tb.png"
+    },
+    {
+        "id": 28,
+        "tipo": "DiscoHDD",
+        "marca": "Seagate",
+        "modelo": "HDD 2Tb Skyhawk",
+        "precio": 8490,
+        "imagen": "../img/hdd/seagate2tb.png"
+    },
+    {
+        "id": 28,
+        "tipo": "DiscoHDD",
+        "marca": "Seagate",
+        "modelo": "HDD 2Tb Skyhawk",
+        "precio": 8490,
+        "imagen": "../img/hdd/seagate2tb.png"
+    },
+    {
+        "id": 29,
+        "tipo": "DiscoSSD",
+        "marca": "Gigabyte",
+        "modelo": "SSD 120Gb Sata III",
+        "precio": 3079,
+        "imagen": "../img/ssd/gigabyte120gb.png"
+    },
+    {
+        "id": 30,
+        "tipo": "DiscoSSD",
+        "marca": "Kingston",
+        "modelo": "SSD 480Gb Sata III",
+        "precio": 6590,
+        "imagen": "../img/ssd/kingston480gb.png"
+    },
+    {
+        "id": 31,
+        "tipo": "DiscoSSD",
+        "marca": "Western Digital",
+        "modelo": "SSD 960Gb WD Green NVME",
+        "precio": 11999,
+        "imagen": "../img/ssd/wd960gb.png"
+    },
+    {
+        "id": 32,
+        "tipo": "Fuente",
+        "marca": "Corsair",
+        "modelo": "550W CV550 80+ Bronze",
+        "precio": 7290,
+        "imagen": "../img/fuente/cv550.png"
+    },
+    {
+        "id": 33,
+        "tipo": "Fuente",
+        "marca": "Thermaltake",
+        "modelo": "Smart BX1 650W 80+ Bronze",
+        "precio": 9990,
+        "imagen": "../img/fuente/smart650w.png"
+    },
+    {
+        "id": 34,
+        "tipo": "Fuente",
+        "marca": "Gigabyte",
+        "modelo": "P850gm 850W 80+ Gold Modular",
+        "precio": 32990,
+        "imagen": "../img/fuente/p850gm.png"
+    },
+    {
+        "id": 35,
+        "tipo": "Gabinete",
+        "marca": "Aerocool",
+        "modelo": "Bionic G V2",
+        "precio": 5290,
+        "imagen": "../img/gabinete/bionicgv2.png"
+    },
+    {
+        "id": 36,
+        "tipo": "Gabinete",
+        "marca": "Thermaltake",
+        "modelo": "H350 TG Black RGB",
+        "precio": 7790,
+        "imagen": "../img/gabinete/h350tgblack.png"
+    },
+    {
+        "id": 37,
+        "tipo": "Gabinete",
+        "marca": "Thermaltake",
+        "modelo": "H200 TG Snow Edition RGB",
+        "precio": 8790,
+        "imagen": "../img/gabinete/h200snow.png"
+    },
+    {
+        "id": 38,
+        "tipo": "Gabinete",
+        "marca": "Cooler Master",
+        "modelo": "SL600M Black Edition",
+        "precio": 26990,
+        "imagen": "../img/gabinete/sl600m.png"
     }
 ]

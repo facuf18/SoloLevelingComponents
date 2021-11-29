@@ -143,7 +143,7 @@ function selecMemoriaRam() {
     $.getJSON(URLJSON, function(respuesta, estado) {
         if (estado === "success") {
             let componentes = respuesta;
-            let memoriasRam = componentes.filter(comp => comp.tipo == "Memoria Ram");
+            let memoriasRam = componentes.filter(comp => comp.tipo == "MemoriaRam");
             for (const memoria of memoriasRam) {
 
                 $("#listaComponentes").append(`<div class="card me-3 mt-3 col-sm-3" id="seleccionRam">
