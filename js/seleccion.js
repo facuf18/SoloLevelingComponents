@@ -543,11 +543,11 @@ function selecGabinete() {
     });
 }
 
-
 function finalizarSeleccion() {
     $("#seleccionGabinete, h4, h5, .botonLista").remove();
     $("#titulo").text("Componentes seleccionados");
     $("#finalizarSeleccion").append("<button type='submit' class='btn btn-danger ms-2' id='btnFinalizarSeleccion'>Finalizar Selección</button>");
+    sessionStorage.setItem("miPC", JSON.stringify(carritoDeComponentes));
 }
 
 $("#finalizarSeleccion").click(function() {

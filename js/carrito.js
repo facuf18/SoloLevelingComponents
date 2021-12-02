@@ -15,7 +15,6 @@ function agregarAlCarrito(nuevoComponente) {
         showConfirmButton: false,
         timer: 650
     });
-    sessionStorage.setItem("miPC", JSON.stringify(carritoDeComponentes));
 }
 
 let precioTotal;

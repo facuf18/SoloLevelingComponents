@@ -25,4 +25,5 @@ $("#newsFormulario").submit(function(e) {
             icon: 'error'
         });
     }
+    $("#email").val('');
 });
