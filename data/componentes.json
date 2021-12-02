@@ -1,6 +1,7 @@
 [{
         "id": 1,
         "tipo": "ProcesadorAmd",
+        "categoria": "Procesador",
         "marca": "AMD",
         "modelo": "Ryzen 5 5600X",
         "precio": 40300,
@@ -9,6 +10,7 @@
     {
         "id": 2,
         "tipo": "ProcesadorAmd",
+        "categoria": "Procesador",
         "marca": "AMD",
         "modelo": "Ryzen 7 5800X",
         "precio": 53500,
@@ -17,6 +19,7 @@
     {
         "id": 3,
         "tipo": "ProcesadorAmd",
+        "categoria": "Procesador",
         "marca": "AMD",
         "modelo": "Ryzen 9 5900X",
         "precio": 78940,
@@ -25,6 +28,7 @@
     {
         "id": 4,
         "tipo": "ProcesadorIntel",
+        "categoria": "Procesador",
         "marca": "Intel",
         "modelo": "Core i5 10600K",
         "precio": 32250,
@@ -33,6 +37,7 @@
     {
         "id": 5,
         "tipo": "ProcesadorIntel",
+        "categoria": "Procesador",
         "marca": "Intel",
         "modelo": "Core i7 10700KF",
         "precio": 48390,
@@ -41,6 +46,7 @@
     {
         "id": 6,
         "tipo": "ProcesadorIntel",
+        "categoria": "Procesador",
         "marca": "Intel",
         "modelo": "Core i9 10900KF",
         "precio": 70090,
@@ -49,6 +55,7 @@
     {
         "id": 7,
         "tipo": "MotherboardAmd",
+        "categoria": "Motherboard",
         "marca": "MSI",
         "modelo": "B450M Pro-M2 MAX AM4",
         "precio": 9199,
@@ -57,6 +64,7 @@
     {
         "id": 8,
         "tipo": "MotherboardAmd",
+        "categoria": "Motherboard",
         "marca": "Asrock",
         "modelo": "B550 Phanton Gaming 4 AM4",
         "precio": 15499,
@@ -65,6 +73,7 @@
     {
         "id": 9,
         "tipo": "MotherboardAmd",
+        "categoria": "Motherboard",
         "marca": "MSI",
         "modelo": "X570-A Pro Box Atx AM4",
         "precio": 22599,
@@ -73,6 +82,7 @@
     {
         "id": 10,
         "tipo": "MotherboardIntel",
+        "categoria": "Motherboard",
         "marca": "Asus",
         "modelo": "B460m-A S1200 R2.0",
         "precio": 13289,
@@ -81,6 +91,7 @@
     {
         "id": 11,
         "tipo": "MotherboardIntel",
+        "categoria": "Motherboard",
         "marca": "Asrock",
         "modelo": "B560 Pro4 S1200",
         "precio": 16999,
@@ -89,6 +100,7 @@
     {
         "id": 12,
         "tipo": "MotherboardIntel",
+        "categoria": "Motherboard",
         "marca": "Gigabyte",
         "modelo": "Z590 UD S1200",
         "precio": 28449,
@@ -97,6 +109,7 @@
     {
         "id": 13,
         "tipo": "MemoriaRam",
+        "categoria": "Memoria Ram",
         "marca": "Kingston Fury Beast",
         "modelo": "DDR4 4GB 2666Mhz",
         "precio": 3359,
@@ -105,6 +118,7 @@
     {
         "id": 14,
         "tipo": "MemoriaRam",
+        "categoria": "Memoria Ram",
         "marca": "Adata XPG Hunter Black",
         "modelo": "DDR4 8GB 3200Mhz",
         "precio": 5399,
@@ -113,6 +127,7 @@
     {
         "id": 15,
         "tipo": "MemoriaRam",
+        "categoria": "Memoria Ram",
         "marca": "Kingston Fury Beast RGB",
         "modelo": "DDR4 8GB 2666Mhz",
         "precio": 5799,
@@ -121,6 +136,7 @@
     {
         "id": 16,
         "tipo": "MemoriaRam",
+        "categoria": "Memoria Ram",
         "marca": "Crucial Ballistix Black RGB Bulk",
         "modelo": "DDR4 16GB 3200Mhz",
         "precio": 11990,
@@ -129,6 +145,7 @@
     {
         "id": 17,
         "tipo": "MemoriaRam",
+        "categoria": "Memoria Ram",
         "marca": "Patriot Viper Steel RGB",
         "modelo": "DDR4 32GB 3600Mhz",
         "precio": 24490,
@@ -137,86 +154,88 @@
     {
         "id": 18,
         "tipo": "PlacaDeVideo",
-        "marca": "",
-        "modelo": "Sin placa de video",
-        "precio": 0,
-        "imagen": "../img/graficas/none.png"
-    },
-    {
-        "id": 19,
-        "tipo": "PlacaDeVideo",
+        "categoria": "Placa de Video",
         "marca": "MSI",
         "modelo": "GEFORCE GTX 1660 SUPER GAMING X",
         "precio": 129999,
         "imagen": "../img/graficas/msi1660super.png"
     },
     {
-        "id": 20,
+        "id": 19,
         "tipo": "PlacaDeVideo",
+        "categoria": "Placa de Video",
         "marca": "PALIT",
         "modelo": "GEFORCE RTX 3060 TI DUAL 8GB",
         "precio": 199999,
         "imagen": "../img/graficas/palit3060ti.png"
     },
     {
-        "id": 21,
+        "id": 20,
         "tipo": "PlacaDeVideo",
+        "categoria": "Placa de Video",
         "marca": "PALIT",
         "modelo": "GEFORCE RTX 3070 GAMING PRO 8GB",
         "precio": 299999,
-        "imagen": "../img/graficas/palitt3070.png"
+        "imagen": "../img/graficas/palit3070.png"
     },
     {
-        "id": 22,
+        "id": 21,
         "tipo": "PlacaDeVideo",
+        "categoria": "Placa de Video",
         "marca": "MSI",
         "modelo": "RADEON RX 6900 XT GAMING Z TRIO 16GB",
         "precio": 328999,
         "imagen": "../img/graficas/msirx6900.png"
     },
     {
-        "id": 23,
+        "id": 22,
         "tipo": "PlacaDeVideo",
+        "categoria": "Placa de Video",
         "marca": "MSI",
         "modelo": "GEFORCE RTX 3080 VENTUS 3X 10GB",
         "precio": 369999,
         "imagen": "../img/graficas/msi3080ventus.png"
     },
     {
-        "id": 24,
+        "id": 23,
         "tipo": "PlacaDeVideo",
+        "categoria": "Placa de Video",
         "marca": "ASUS",
         "modelo": "GEFORCE RTX 3080 ROG STRIX 10GB",
         "precio": 509000,
         "imagen": "../img/graficas/asus3080.png"
     },
     {
-        "id": 25,
+        "id": 24,
         "tipo": "PlacaDeVideo",
+        "categoria": "Placa de Video",
         "marca": "MSI",
         "modelo": "GEFORCE RTX 3090 GAMING X TRIO 24GB",
         "precio": 636999,
         "imagen": "../img/graficas/msi3090.png"
     },
     {
-        "id": 26,
+        "id": 25,
         "tipo": "DiscoHDD",
+        "categoria": "Disco Duro",
         "marca": "Western Digital",
         "modelo": "HDD 1Tb WD Blue",
         "precio": 4930,
         "imagen": "../img/hdd/wdblue1tb.png"
     },
     {
-        "id": 27,
+        "id": 26,
         "tipo": "DiscoHDD",
+        "categoria": "Disco Duro",
         "marca": "Seagate",
         "modelo": "HDD 1Tb Skyhawk",
         "precio": 5899,
         "imagen": "../img/hdd/seagate1tb.png"
     },
     {
-        "id": 28,
+        "id": 27,
         "tipo": "DiscoHDD",
+        "categoria": "Disco Duro",
         "marca": "Seagate",
         "modelo": "HDD 2Tb Skyhawk",
         "precio": 8490,
@@ -225,6 +244,7 @@
     {
         "id": 28,
         "tipo": "DiscoHDD",
+        "categoria": "Disco Duro",
         "marca": "Seagate",
         "modelo": "HDD 2Tb Skyhawk",
         "precio": 8490,
@@ -233,6 +253,7 @@
     {
         "id": 29,
         "tipo": "DiscoSSD",
+        "categoria": "Disco SSD",
         "marca": "Gigabyte",
         "modelo": "SSD 120Gb Sata III",
         "precio": 3079,
@@ -241,6 +262,7 @@
     {
         "id": 30,
         "tipo": "DiscoSSD",
+        "categoria": "Disco SSD",
         "marca": "Kingston",
         "modelo": "SSD 480Gb Sata III",
         "precio": 6590,
@@ -249,6 +271,7 @@
     {
         "id": 31,
         "tipo": "DiscoSSD",
+        "categoria": "Disco SSD",
         "marca": "Western Digital",
         "modelo": "SSD 960Gb WD Green NVME",
         "precio": 11999,
@@ -257,6 +280,7 @@
     {
         "id": 32,
         "tipo": "Fuente",
+        "categoria": "Fuente",
         "marca": "Corsair",
         "modelo": "550W CV550 80+ Bronze",
         "precio": 7290,
@@ -265,6 +289,7 @@
     {
         "id": 33,
         "tipo": "Fuente",
+        "categoria": "Fuente",
         "marca": "Thermaltake",
         "modelo": "Smart BX1 650W 80+ Bronze",
         "precio": 9990,
@@ -273,6 +298,7 @@
     {
         "id": 34,
         "tipo": "Fuente",
+        "categoria": "Fuente",
         "marca": "Gigabyte",
         "modelo": "P850gm 850W 80+ Gold Modular",
         "precio": 32990,
@@ -281,6 +307,7 @@
     {
         "id": 35,
         "tipo": "Gabinete",
+        "categoria": "Gabinete",
         "marca": "Aerocool",
         "modelo": "Bionic G V2",
         "precio": 5290,
@@ -289,6 +316,7 @@
     {
         "id": 36,
         "tipo": "Gabinete",
+        "categoria": "Gabinete",
         "marca": "Thermaltake",
         "modelo": "H350 TG Black RGB",
         "precio": 7790,
@@ -297,6 +325,7 @@
     {
         "id": 37,
         "tipo": "Gabinete",
+        "categoria": "Gabinete",
         "marca": "Thermaltake",
         "modelo": "H200 TG Snow Edition RGB",
         "precio": 8790,
@@ -305,6 +334,7 @@
     {
         "id": 38,
         "tipo": "Gabinete",
+        "categoria": "Gabinete",
         "marca": "Cooler Master",
         "modelo": "SL600M Black Edition",
         "precio": 26990,

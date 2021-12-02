@@ -7,12 +7,13 @@ function agregarAlCarrito(nuevoComponente) {
     console.log(carritoDeComponentes);
     console.log(preciosComponentes);
     Swal.fire({
-        position: 'top-end',
+        position: 'center',
         title: 'Nuevo componente agregado',
+        width: 400,
         text: nuevoComponente.tipo + " " + nuevoComponente.marca + " " + nuevoComponente.modelo,
         icon: 'success',
         showConfirmButton: false,
-        timer: 2500
+        timer: 650
     });
     sessionStorage.setItem("miPC", JSON.stringify(carritoDeComponentes));
 }
@@ -31,7 +32,7 @@ function mostrarCarrito() {
     calcularPrecioTotal();
     for (const componente of carritoDeComponentes) {
         $("#tablaCarrito").append(`
-            <tr><td>${componente.tipo}</td>
+            <tr><td>${componente.categoria}</td>
             <td>${componente.marca} ${componente.modelo}</td>
             <td>$${componente.precio}</td></tr>`);
     }
